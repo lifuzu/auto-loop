@@ -1,0 +1,14 @@
+{
+  "server": [
+    "platbuild02.sjc1700.bnweb.user.bn",
+    "platbuild03.sjc1700.bnweb.user.bn",
+    "platbuild04.sjc1700.bnweb.user.bn",
+    "platbuild05.sjc1700.bnweb.user.bn",
+    "platbuild06.sjc1700.bnweb.user.bn",
+    "platbuild07.sjc1700.bnweb.user.bn",
+    "platbuild08.sjc1700.bnweb.user.bn"
+  ],
+  "username": "build",
+  "password": "r0b0c0p$",
+  "clientscript": "./ssh-loop.client.bash"
+}

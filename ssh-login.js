@@ -1,4 +1,8 @@
 var Connection = require('ssh2');
+var argv = require('optimist')
+    .usage('Usage: $0 -h [hostname] -u [username] -p [password] -s [clientscript]')
+    .demand(['h', 'u', 'p', 's'])
+    .argv;
 
 var c = new Connection();
 c.on('connect', function() {
@@ -34,11 +38,11 @@ c.on('close', function(had_error) {
   console.log('Connection :: close');
 });
 c.connect({
-  host: 'platbuild18.sjc1700.bnweb.user.bn',
+  host: argv.h,
   port: 22,
-  username: 'build',
+  username: argv.u,
   //privateKey: require('fs').readFileSync('/home/rlee/key')
-  password: process.env.MYDOMAINPASSWORD
+  password: argv.p
 });
 
 // example output:
