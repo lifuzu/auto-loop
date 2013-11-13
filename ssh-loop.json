@@ -6,9 +6,10 @@
     "platbuild05.sjc1700.bnweb.user.bn",
     "platbuild06.sjc1700.bnweb.user.bn",
     "platbuild07.sjc1700.bnweb.user.bn",
-    "platbuild08.sjc1700.bnweb.user.bn"
+    "platbuild08.sjc1700.bnweb.user.bn",
+    "platbuild09.sjc1700.bnweb.user.bn"
   ],
   "username": "build",
-  "password": "r0b0c0p$",
+  "password": "PASSWORD",
   "clientscript": "./ssh-loop.client.bash"
 }

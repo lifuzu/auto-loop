@@ -10,21 +10,30 @@ c.on('connect', function() {
 });
 c.on('ready', function() {
   console.log('Connection :: ready');
-  c.exec('hostname', function(err, stream) {
+  c.sftp(function(err, sftp) {
     if (err) throw err;
-    stream.on('data', function(data, extended) {
-      console.log((extended === 'stderr' ? 'STDERR: ' : 'STDOUT: ')
-                  + data);
+    sftp.on('end', function() {
+      console.log('SFTP :: SFTP session closed');
     });
-    stream.on('end', function() {
-      console.log('Stream :: EOF');
-    });
-    stream.on('close', function() {
-      console.log('Stream :: close');
-    });
-    stream.on('exit', function(code, signal) {
-      console.log('Stream :: exit :: code: ' + code + ', signal: ' + signal);
-      c.end();
+    sftp.fastPut(argv.s, '/tmp/client.bash', function(err){
+      if (err) throw err;
+      c.exec('chmod +x /tmp/client.bash && bash /tmp/client.bash', function(err, stream) {
+        if (err) throw err;
+        stream.on('data', function(data, extended) {
+          console.log((extended === 'stderr' ? 'STDERR: ' : 'STDOUT: ')
+                      + data);
+        });
+        stream.on('end', function() {
+          console.log('Stream :: EOF');
+        });
+        stream.on('close', function() {
+          console.log('Stream :: close');
+        });
+        stream.on('exit', function(code, signal) {
+          console.log('Stream :: exit :: code: ' + code + ', signal: ' + signal);
+          c.end();
+        });
+      });
     });
   });
 });
