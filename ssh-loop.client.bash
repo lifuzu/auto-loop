@@ -1,15 +1,17 @@
-PASSWORD="<PASSWORD>"
+PASSWORD="PASSWORD"
 HOSTNAME=`hostname`
-hostname
+echo $HOSTNAME
 #uptime
 
-#wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb
-#echo $PASSWORD | sudo -S dpkg -i puppetlabs-release-precise.deb
+#[ ! -d Downloads ] && mkdir Downloads
+#wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb -O Downloads/puppetlabs-release-precise.deb
+#echo $PASSWORD | sudo -S dpkg -i Downloads/puppetlabs-release-precise.deb
+
+
 #echo $PASSWORD | sudo -S apt-get update
 #echo $PASSWORD | sudo -S apt-get install -y puppet
-
 #ps aux | grep puppet
-puppet --version
+#puppet --version
 
 # config
 # 1.
@@ -37,4 +39,9 @@ puppet --version
 # fi
 
 # Trigger puppet agent
-echo $PASSWORD | sudo -S puppet agent
+echo $PASSWORD | sudo -S puppet agent --test
+
+# Verification
+#echo $PASSWORD | sudo -S ls /etc/cron.d/cleanup_space_daily
+
+#df -h /data

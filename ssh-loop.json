@@ -1,4 +1,5 @@
 {
+
   "server": [
     "platbuild02.sjc1700.bnweb.user.bn",
     "platbuild03.sjc1700.bnweb.user.bn",
@@ -7,7 +8,25 @@
     "platbuild06.sjc1700.bnweb.user.bn",
     "platbuild07.sjc1700.bnweb.user.bn",
     "platbuild08.sjc1700.bnweb.user.bn",
-    "platbuild09.sjc1700.bnweb.user.bn"
+    "platbuild09.sjc1700.bnweb.user.bn",
+    "platbuild11.sjc1700.bnweb.user.bn",
+    "platbuild12.sjc1700.bnweb.user.bn",
+    "platbuild13.sjc1700.bnweb.user.bn",
+    "platbuild14.sjc1700.bnweb.user.bn",
+    "platbuild15.sjc1700.bnweb.user.bn",
+    "platbuild16.sjc1700.bnweb.user.bn",
+    "platbuild17.sjc1700.bnweb.user.bn",
+    "platbuild18.sjc1700.bnweb.user.bn",
+    "platbuild19.sjc1700.bnweb.user.bn",
+    "platbuild20.sjc1700.bnweb.user.bn",
+    "platbuild21.sjc1700.bnweb.user.bn",
+    "platbuild22.sjc1700.bnweb.user.bn",
+    "platbuild23.sjc1700.bnweb.user.bn",
+    "platbuild24.sjc1700.bnweb.user.bn",
+    "platbuild25.sjc1700.bnweb.user.bn",
+    "platbuild26.sjc1700.bnweb.user.bn",
+    "platbuild27.sjc1700.bnweb.user.bn",
+    "platbuild28.sjc1700.bnweb.user.bn"
   ],
   "username": "build",
   "password": "PASSWORD",
