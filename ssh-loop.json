@@ -4,7 +4,6 @@
     "platbuild02.sjc1700.bnweb.user.bn"
   ],
   "server": [
-    "platbuild02.sjc1700.bnweb.user.bn",
     "platbuild03.sjc1700.bnweb.user.bn",
     "platbuild04.sjc1700.bnweb.user.bn",
     "platbuild05.sjc1700.bnweb.user.bn",
@@ -33,5 +32,5 @@
   ],
   "username": "build",
   "password": "PASSWORD",
-  "clientscript": "./assert-continue-connect-ssh-with-yes.client.bash"
+  "clientscript": "./install-python-paramiko.client.bash"
 }
