@@ -39,7 +39,7 @@ echo $HOSTNAME
 # fi
 
 # Trigger puppet agent
-echo $PASSWORD | sudo -S puppet agent --test
+#echo $PASSWORD | sudo -S puppet agent --test
 
 # Verification
 #echo $PASSWORD | sudo -S ls /etc/cron.d/cleanup_space_daily
